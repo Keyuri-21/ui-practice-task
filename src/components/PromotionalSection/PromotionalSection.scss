@@ -1,14 +1,14 @@
 .promotional-section {
   display: flex;
   width: 100%;
-  max-width: 1645px; // Based on left position + width of right element
+  max-width: 1645px;
   margin: 0 auto;
   gap: 20px;
   padding: 20px;
 
   .rectangle-4 {
     flex: 1;
-    width: calc(100% - 431px - 20px); // Full width minus right element and gap
+    width: calc(100% - 431px - 20px);
     height: 567px;
     padding: 40px;
     background: #DEF1BD; 

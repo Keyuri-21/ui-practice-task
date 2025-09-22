@@ -3,23 +3,25 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 80px 40px;
+  overflow-x: hidden;
 
   .serices {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 60px; 
+    gap: 60px;
     flex-wrap: nowrap;
+    
     .support,
     .payment,
     .refund,
     .shipping {
       display: flex;
       align-items: center;
-      gap: 24px; 
+      gap: 24px;
       flex: 1;
-      min-width: 280px;
-      max-width: 320px; 
+      min-width: 0; 
+      max-width: 320px;
       height: auto;
       min-height: 100px;
       opacity: 1;
@@ -38,7 +40,7 @@
       .shipping-text {
         display: flex;
         flex-direction: column;
-        gap: 6px; 
+        gap: 6px;
         flex: 1;
         min-width: 0;
 
@@ -46,8 +48,8 @@
           font-family: 'Open Sans';
           font-weight: 700;
           font-style: normal;
-          font-size: 20px; 
-          line-height: 28px; 
+          font-size: 20px;
+          line-height: 28px;
           letter-spacing: 0;
           margin: 0;
           transition: color 0.3s ease;
@@ -58,8 +60,8 @@
           font-family: 'Open Sans';
           font-weight: 300;
           font-style: normal;
-          font-size: 20px; 
-          line-height: 24px; 
+          font-size: 20px;
+          line-height: 24px;
           letter-spacing: 0;
           margin: 0;
           transition: color 0.3s ease;
@@ -69,15 +71,44 @@
         }
       }
     }
+  }
+}
 
-    .payment {
-      .payment-text {
-        min-width: 334px; 
+@media (min-width: 1729px) {
+  .service-container {
+    max-width: 1800px;
+    padding: 120px 80px;
+
+    .serices {
+      gap: 80px;
+      
+      .support,
+      .payment,
+      .refund,
+      .shipping {
+        max-width: 400px;
+        gap: 32px;
+
+        .support-text,
+        .payment-text,
+        .refund-text,
+        .shipping-text {
+          gap: 10px;
+
+          h6 {
+            font-size: 26px;
+            line-height: 32px;
+          }
+
+          p {
+            font-size: 22px;
+            line-height: 28px;
+          }
+        }
       }
     }
   }
 }
-
 
 @media (min-width: 1600px) and (max-width: 1728px) {
   .service-container {
@@ -91,7 +122,6 @@
       .payment,
       .refund,
       .shipping {
-        min-width: 320px;
         max-width: 360px;
         gap: 28px;
 
@@ -128,7 +158,6 @@
       .payment,
       .refund,
       .shipping {
-        min-width: 300px;
         max-width: 340px;
         gap: 26px;
 
@@ -156,7 +185,7 @@
     padding: 80px 40px;
 
     .serices {
-      gap: 60px;
+      gap: 50px;
     }
   }
 }
@@ -168,15 +197,15 @@
     .serices {
       gap: 40px;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
       
       .support,
       .payment,
       .refund,
       .shipping {
         flex: 0 1 calc(50% - 20px);
-        min-width: 280px;
-        max-width: 400px;
+        min-width: 0;
+        max-width: 45%;
         gap: 20px;
 
         .support-text,
@@ -186,11 +215,15 @@
           h6 {
             font-size: 20px;
             line-height: 26px;
+            white-space: normal;
           }
 
           p {
             font-size: 16px;
             line-height: 22px;
+            white-space: normal;
+            overflow: visible;
+            text-overflow: unset;
           }
         }
       }
@@ -205,15 +238,15 @@
     .serices {
       flex-wrap: wrap;
       gap: 30px;
-      justify-content: space-around;
+      justify-content: center;
       
       .support,
       .payment,
       .refund,
       .shipping {
         flex: 0 1 calc(50% - 15px);
-        min-width: 300px;
-        max-width: 400px;
+        min-width: 0;
+        max-width: 45%;
         min-height: 120px;
         justify-content: flex-start;
         text-align: left;
@@ -228,6 +261,7 @@
         svg {
           width: 40px;
           height: 40px;
+          flex-shrink: 0;
         }
 
         .support-text,
@@ -270,7 +304,7 @@
       .shipping {
         width: 100%;
         max-width: 500px;
-        min-width: auto;
+        min-width: 0;
         justify-content: center;
         text-align: center;
         gap: 24px;
@@ -284,6 +318,7 @@
         svg {
           width: 44px;
           height: 44px;
+          flex-shrink: 0;
         }
 
         .support-text,
@@ -310,27 +345,33 @@
     }
   }
 }
+
 @media (min-width: 480px) and (max-width: 575px) {
   .service-container {
     padding: 40px 16px;
 
     .serices {
+      flex-direction: column;
+      align-items: center;
       gap: 28px;
 
       .support,
       .payment,
       .refund,
       .shipping {
+        width: 100%;
         flex-direction: column;
         text-align: center;
         gap: 18px;
         padding: 24px 18px;
         max-width: 100%;
+        min-width: 0;
 
         svg {
           width: 48px;
           height: 48px;
           margin: 0 auto;
+          flex-shrink: 0;
         }
 
         .support-text,
@@ -357,21 +398,26 @@
     padding: 35px 12px;
 
     .serices {
+      flex-direction: column;
+      align-items: center;
       gap: 24px;
 
       .support,
       .payment,
       .refund,
       .shipping {
+        width: 100%;
         flex-direction: column;
         text-align: center;
         gap: 16px;
         padding: 20px 12px;
+        min-width: 0;
 
         svg {
           width: 44px;
           height: 44px;
           margin: 0 auto;
+          flex-shrink: 0;
         }
 
         .support-text,
@@ -386,43 +432,6 @@
           p {
             font-size: 13px;
             line-height: 18px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1729px) {
-  .service-container {
-    max-width: 1800px;
-    padding: 120px 80px;
-
-    .serices {
-      gap: 80px;
-      
-      .support,
-      .payment,
-      .refund,
-      .shipping {
-        min-width: 340px;
-        max-width: 400px;
-        gap: 32px;
-
-        .support-text,
-        .payment-text,
-        .refund-text,
-        .shipping-text {
-          gap: 10px;
-
-          h6 {
-            font-size: 26px;
-            line-height: 32px;
-          }
-
-          p {
-            font-size: 22px;
-            line-height: 28px;
           }
         }
       }
