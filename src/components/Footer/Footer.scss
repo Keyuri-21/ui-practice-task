@@ -1,0 +1,224 @@
+.footer-container {
+  width: 100%;
+
+  .email-bar {
+    width: 100%;
+    background: #DEF1BD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 auto;
+    padding: 24px 20px;
+
+    .email-input-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 900px;
+
+      .email-input {
+        flex: 1;
+        min-width: 240px;
+        max-width: 519px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border: 3px solid #FFFFFF;
+        padding: 10px 14px;
+        gap: 12px;
+        background: transparent;
+
+        svg {
+          flex-shrink: 0;
+        }
+
+        input {
+          flex: 1;
+          border: none;
+          outline: none;
+          background: transparent;
+          color: #8E8E8E;
+          font-family: 'Open Sans';
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.4;
+          text-transform: capitalize;
+
+          &::placeholder {
+            color: #8E8E8E;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.4;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      .subscribe-btn {
+        flex-shrink: 0;
+        width: 162px;
+        height: 60px;
+        background: #FFFFFF;
+        border: none;
+        padding: 10px;
+        color: #000000;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.4;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: #f5f5f5;
+        }
+      }
+    }
+
+    .signup-text {
+      color: #000000;
+      font-family: 'Montserrat';
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .footer-content {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+
+    .footer-section {
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+
+      .footer-links,
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        a {
+          font-size: 16px;
+          color: #636362;
+          text-decoration: none;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: #000;
+          }
+        }
+
+        .social-link {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+    }
+
+    .company-section {
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+
+        img {
+          width: 48px;
+          height: 48px;
+          object-fit: contain;
+        }
+
+        p {
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+
+      .contact-info {
+        margin-bottom: 16px;
+
+        h4 {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #8e8e8e;
+        }
+      }
+
+      .payment-methods img {
+        max-width: 200px;
+        height: auto;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 2px solid #d9d9d9;
+    padding: 20px;
+    text-align: center;
+
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .email-input-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+
+      .subscribe-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    .footer-content {
+      padding: 40px 20px;
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .email-bar {
+      padding: 20px 16px;
+      gap: 12px;
+
+      .signup-text {
+        font-size: 18px;
+      }
+    }
+
+    .footer-content {
+      padding: 30px 16px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .footer-bottom {
+      padding: 16px;
+    }
+  }
+}
