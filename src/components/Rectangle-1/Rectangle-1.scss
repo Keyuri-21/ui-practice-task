@@ -1,0 +1,90 @@
+.rectangle-1 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FCFCF7 6.5%, #F5EEAD 100%);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-attachment: fixed; 
+}
+
+@media (min-width: 1600px) and (max-width: 1728px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 4%, #F5EEAD 100%);
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 5%, #F5EEAD 100%);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 6%, #F5EEAD 100%);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 6.5%, #F5EEAD 100%);
+    
+    &::before {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 7%, #F5EEAD 100%);
+    background-attachment: scroll;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 8%, #F5EEAD 100%);
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 575px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 9%, #F5EEAD 100%);
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 479px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 10%, #F5EEAD 100%);
+    background-attachment: scroll;
+    
+  }
+}
+
+@media (max-width: 374px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 12%, #F5EEAD 100%);
+    background-attachment: scroll;
+  
+  }
+}
+@media (min-width: 1729px) {
+  .rectangle-1 {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #FCFCF7 3%, #F5EEAD 100%);
+    
+  }
+}
