@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 60px;
-  position: relative;
+  position: fixed;
+  z-index: 5;
 
   // Logo Section
   .logo {
@@ -30,7 +31,7 @@
 
     .logo-text {
       p {
-        font-family: 'Jomhuria', serif;
+        font-family: 'Jomhuria';
         font-weight: 400;
         font-style: normal;
         font-size: 36px;
@@ -52,7 +53,7 @@
     margin-left: 80px;
 
     .nav-item {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+      font-family: 'Inter';
       font-weight: 400;
       font-size: 18px;
       line-height: 22px;
@@ -81,23 +82,12 @@
       gap: 12px;
       padding: 0 16px;
       background: #FFFFFF;
-      border: 1px solid #D1D5DB;
-      border-radius: 8px;
+      border: 1px solid #000000;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
       &:focus-within {
         border-color: #4CAF50;
         box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
-      }
-
-      svg {
-        width: 19px;
-        height: 20px;
-        flex-shrink: 0;
-
-        path {
-          fill: #8E8E8E;
-        }
       }
 
       input {
@@ -224,6 +214,10 @@
         width: 52px;
         height: 52px;
       }
+
+      .logo-text p {
+        font-size: 38px;
+      }
     }
 
     .navigation {
@@ -243,29 +237,29 @@
         height: 48px;
 
         input {
-          font-size: 17px;
+          font-size: 18px;
 
           &::placeholder {
-            font-size: 17px;
+            font-size: 18px;
           }
         }
       }
     }
 
     .header-actions {
-      gap: 28px;
+      gap: 36px;
 
       .action-icons {
-        gap: 24px;
+        gap: 20px;
       }
 
       .auth-buttons {
-        gap: 16px;
+        gap: 12px;
 
         button {
-          height: 44px;
-          padding: auto;
-          font-size: 15px;
+          height: 40px;
+          padding: 0 20px;
+          font-size: 16px;
         }
       }
     }
@@ -304,24 +298,13 @@
     .search-container {
       max-width: 300px;
       margin: 0 32px;
-    }
 
-    .navigation {
-      .nav-item {
-        font-size: 18px;
-        line-height: 28px;
-      }
-    }
-
-    .search-container {
       .search-box {
         input {
-          font-size: 18px;
-          line-height: 28px;
+          font-size: 16px;
 
           &::placeholder {
-            font-size: 18px;
-            line-height: 28px;
+            font-size: 16px;
           }
         }
       }
@@ -330,8 +313,8 @@
     .header-actions {
       .auth-buttons {
         button {
-          padding: auto;
-          font-size: 18px;
+          font-size: 14px;
+          padding: 0 12px;
         }
       }
     }
@@ -356,15 +339,15 @@
       gap: 16px;
 
       .action-icons {
-        gap: 16px;
+        gap: 12px;
       }
 
       .auth-buttons {
-        gap: 8px;
+        gap: 6px;
 
         button {
-          padding: auto;
           font-size: 13px;
+          padding: 0 10px;
         }
       }
     }
@@ -385,6 +368,10 @@
       .logo-icon img {
         width: 40px;
         height: 40px;
+      }
+
+      .logo-text p {
+        font-size: 28px;
       }
     }
 
@@ -408,8 +395,8 @@
 
       .auth-buttons {
         button {
-          height: 36px;
-          padding: auto;
+          height: 32px;
+          padding: 0 8px;
           font-size: 12px;
         }
       }
@@ -424,6 +411,14 @@
 
       .search-box {
         height: 40px;
+
+        input {
+          font-size: 16px;
+
+          &::placeholder {
+            font-size: 16px;
+          }
+        }
       }
     }
 
@@ -452,6 +447,10 @@
         width: 36px;
         height: 36px;
       }
+
+      .logo-text p {
+        font-size: 24px;
+      }
     }
 
     .header-actions {
@@ -471,8 +470,8 @@
 
       .auth-buttons {
         button {
-          height: 32px;
-          padding: auto;
+          height: 30px;
+          padding: 0 6px;
           font-size: 11px;
         }
       }
@@ -513,6 +512,9 @@
         height: 32px;
       }
 
+      .logo-text p {
+        font-size: 22px;
+      }
     }
 
     .header-actions {
@@ -533,7 +535,7 @@
       }
 
       .auth-buttons {
-        gap: 6px;
+        gap: 4px;
 
         button {
           height: 30px;
