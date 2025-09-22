@@ -1,0 +1,390 @@
+.top-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 80px auto;
+
+  .top-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 100%;
+
+    .title {
+      width: 459px;
+      height: 69px;
+      opacity: 1;
+
+      h2 {
+        font-family: 'Inter';
+        font-weight: 700;
+        font-style: normal;
+        font-size: 36px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        margin: 0;
+        color: #000000;
+        text-align: left;
+      }
+    }
+
+    .nav-btns {
+      display: flex;
+      align-items: center;
+      gap: 41px;
+      width: 149px;
+      height: 44px;
+      opacity: 1;
+
+      svg {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 44px;
+        height: 44px;
+
+        &:hover {
+          transform: scale(1.05);
+          
+          circle {
+            fill: #f0f0f0;
+          }
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+
+  .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 49px;
+    width: 100%;
+    max-width: 1356px;
+    height: auto;
+    min-height: 167px;
+    border-radius: 10px;
+    opacity: 1;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    .fruits,
+    .veges,
+    .meat,
+    .snacks,
+    .milk {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 192px;
+      height: 165px;
+      border-radius: 30px;
+      opacity: 1;
+      background: #F8E86621;
+      box-shadow: 0px 4px 4px 0px #00000040;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 20px;
+      box-sizing: border-box;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+        background: rgba(248, 232, 102, 0.2);
+      }
+
+      &:active {
+        transform: translateY(-2px);
+      }
+
+      img {
+        width: 73px;
+        height: 64px;
+        border-radius: 30px;
+        opacity: 1;
+        object-fit: contain;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      p {
+        font-family: 'Inter';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 26px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0;
+        color: #333333;
+        transition: color 0.3s ease;
+      }
+
+      &:hover p {
+        color: #000000;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .top-container {
+    max-width: 1400px;
+    padding: 50px 30px;
+
+    .items {
+      max-width: 1200px;
+      gap: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .top-container {
+    padding: 40px 25px;
+
+    .top-category {
+      margin-bottom: 40px;
+
+      .title {
+        width: auto;
+        max-width: 400px;
+
+        h2 {
+          font-size: 32px;
+        }
+      }
+
+      .nav-btns {
+        gap: 30px;
+        
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    .items {
+      gap: 30px;
+      max-width: 1000px;
+
+      .fruits,
+      .veges,
+      .meat,
+      .snacks,
+      .milk {
+        width: 170px;
+        height: 150px;
+
+        img {
+          width: 60px;
+          height: 55px;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .top-container {
+    padding: 35px 20px;
+
+    .top-category {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      margin-bottom: 35px;
+
+      .title {
+        width: 100%;
+        max-width: none;
+
+        h2 {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+
+      .nav-btns {
+        width: auto;
+      }
+    }
+
+    .items {
+      gap: 25px;
+      justify-content: center;
+
+      .fruits,
+      .veges,
+      .meat,
+      .snacks,
+      .milk {
+        width: 160px;
+        height: 140px;
+
+        img {
+          width: 55px;
+          height: 50px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-container {
+    padding: 30px 15px;
+
+    .top-category {
+      margin-bottom: 30px;
+
+      .title h2 {
+        font-size: 28px;
+      }
+
+      .nav-btns {
+        gap: 20px;
+
+        svg {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+
+    .items {
+      gap: 20px;
+      justify-content: center;
+
+      .fruits,
+      .veges,
+      .meat,
+      .snacks,
+      .milk {
+        width: 140px;
+        height: 130px;
+        padding: 15px;
+
+        img {
+          width: 45px;
+          height: 40px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top-container {
+    padding: 25px 10px;
+
+    .top-category {
+      margin-bottom: 25px;
+
+      .title h2 {
+        font-size: 24px;
+      }
+
+      .nav-btns {
+        gap: 15px;
+
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+    .items {
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .fruits,
+      .veges,
+      .meat,
+      .snacks,
+      .milk {
+        width: 120px;
+        height: 115px;
+        padding: 12px;
+
+        img {
+          width: 40px;
+          height: 35px;
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 110%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .top-container {
+    padding: 20px 8px;
+
+    .top-category {
+      .title h2 {
+        font-size: 22px;
+      }
+
+      .nav-btns svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    .items {
+      gap: 12px;
+
+      .fruits,
+      .veges,
+      .meat,
+      .snacks,
+      .milk {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+
+        img {
+          width: 35px;
+          height: 30px;
+          margin-bottom: 6px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
