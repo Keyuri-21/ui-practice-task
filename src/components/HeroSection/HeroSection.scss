@@ -5,9 +5,11 @@
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding: 60px 40px 80px;
+  padding: 140px 40px 80px; 
   gap: 60px;
   flex: 1;
+  min-height: calc(100vh - 80px);
+  margin-top: 100px;
   
   .content-left {
     flex: 1;
@@ -98,11 +100,64 @@
   }
 }
 
+@media (min-width: 1729px) {
+  .main-content {
+    max-width: 1600px;
+    padding: 168px 80px 120px;
+    gap: 100px;
+    min-height: calc(100vh - 88px);
+    
+    .content-left {
+      max-width: 700px;
+      
+      .heading {
+        margin-bottom: 56px;
+        
+        h1 {
+          font-size: 80px;
+          margin-bottom: 32px;
+          
+          span {
+            -webkit-text-stroke: 3px #000000;
+          }
+        }
+        
+        p {
+          font-size: 28px;
+          max-width: 600px;
+          line-height: 1.4;
+        }
+      }
+      
+      .learn-more {
+        button {
+          width: 285px;
+          height: 82px;
+          font-size: 28px;
+        }
+      }
+    }
+    
+    .content-right {
+      max-width: 700px;
+      
+      .fruit-imag {
+        max-width: 600px;
+        
+        img {
+          filter: drop-shadow(0px 12px 40px rgba(0, 0, 0, 0.25));
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 1600px) and (max-width: 1728px) {
   .main-content {
     max-width: 1500px;
-    padding: 80px 60px 100px;
+    padding: 168px 60px 100px;
     gap: 80px;
+    min-height: calc(100vh - 88px);
     
     .content-left {
       max-width: 650px;
@@ -152,7 +207,7 @@
 @media (min-width: 1400px) and (max-width: 1599px) {
   .main-content {
     max-width: 1300px;
-    padding: 70px 50px 90px;
+    padding: 150px 50px 90px;
     gap: 70px;
     
     .content-left {
@@ -186,7 +241,7 @@
 @media (min-width: 1200px) and (max-width: 1399px) {
   .main-content {
     max-width: 1200px;
-    padding: 60px 40px 80px;
+    padding: 140px 40px 80px;
     gap: 60px;
     
     .content-left {
@@ -220,7 +275,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .main-content {
     max-width: 100%;
-    padding: 50px 30px 70px;
+    padding: 130px 30px 70px;
     gap: 50px;
     
     .content-left {
@@ -263,7 +318,7 @@
   .main-content {
     flex-direction: column;
     text-align: center;
-    padding: 40px 24px 60px;
+    padding: 140px 24px 60px;
     gap: 40px;
     
     .content-left {
@@ -312,7 +367,7 @@
   .main-content {
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px 50px;
+    padding: 130px 20px 50px;
     gap: 35px;
     
     .content-left {
@@ -359,7 +414,7 @@
   .main-content {
     flex-direction: column;
     text-align: center;
-    padding: 25px 16px 40px;
+    padding: 125px 16px 40px;
     gap: 30px;
     
     .content-left {
@@ -406,7 +461,7 @@
   .main-content {
     flex-direction: column;
     text-align: center;
-    padding: 20px 14px 35px;
+    padding: 120px 14px 35px;
     gap: 25px;
     
     .content-left {
@@ -453,7 +508,7 @@
   .main-content {
     flex-direction: column;
     text-align: center;
-    padding: 16px 12px 30px;
+    padding: 116px 12px 30px;
     gap: 20px;
     
     .content-left {
@@ -491,57 +546,6 @@
         
         img {
           filter: drop-shadow(0px 3px 12px rgba(0, 0, 0, 0.1));
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1729px) {
-  .main-content {
-    max-width: 1600px;
-    padding: 100px 80px 120px;
-    gap: 100px;
-    
-    .content-left {
-      max-width: 700px;
-      
-      .heading {
-        margin-bottom: 56px;
-        
-        h1 {
-          font-size: 80px;
-          margin-bottom: 32px;
-          
-          span {
-            -webkit-text-stroke: 3px #000000;
-          }
-        }
-        
-        p {
-          font-size: 28px;
-          max-width: 600px;
-          line-height: 1.4;
-        }
-      }
-      
-      .learn-more {
-        button {
-          width: 285px;
-          height: 82px;
-          font-size: 28px;
-        }
-      }
-    }
-    
-    .content-right {
-      max-width: 700px;
-      
-      .fruit-imag {
-        max-width: 600px;
-        
-        img {
-          filter: drop-shadow(0px 12px 40px rgba(0, 0, 0, 0.25));
         }
       }
     }
