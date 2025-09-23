@@ -6,7 +6,9 @@
   justify-content: space-between;
   padding: 0 60px;
   position: fixed;
-  z-index: 5;
+  top: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, #FCFCF7 6.5%, #F5EEAD 100%);
 
   // Logo Section
   .logo {
@@ -62,6 +64,7 @@
       transition: color 0.2s ease;
       white-space: nowrap;
       padding: 8px 0;
+      text-decoration: none;
 
       &:hover {
         color: #666666;
@@ -160,6 +163,64 @@
         width: 31px;
         height: 25px;
       }
+
+      .cart-icon {
+        position: relative;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        .cart-icon-container {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            display: block;
+            width: 31px;
+            height: 25px;
+          }
+
+          .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #FF4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 1;
+            min-width: 20px;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            animation: cartBadgeAppear 0.3s ease-out;
+
+            &:has-text {
+              font-size: 10px;
+              padding: 2px 4px;
+              min-width: 18px;
+              height: 18px;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
     }
 
     .auth-buttons {
@@ -201,6 +262,22 @@
         border: none;
       }
     }
+  }
+}
+
+@keyframes cartBadgeAppear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -391,6 +468,18 @@
           width: 28px;
           height: 22px;
         }
+
+        .cart-icon {
+          .cart-icon-container {
+            .cart-badge {
+              width: 18px;
+              height: 18px;
+              font-size: 10px;
+              top: -6px;
+              right: -6px;
+            }
+          }
+        }
       }
 
       .auth-buttons {
@@ -466,6 +555,23 @@
           width: 26px;
           height: 20px;
         }
+
+        .cart-icon {
+          .cart-icon-container {
+            svg {
+              width: 26px;
+              height: 20px;
+            }
+
+            .cart-badge {
+              width: 16px;
+              height: 16px;
+              font-size: 9px;
+              top: -5px;
+              right: -5px;
+            }
+          }
+        }
       }
 
       .auth-buttons {
@@ -531,6 +637,23 @@
         .cart-icon svg {
           width: 24px;
           height: 18px;
+        }
+
+        .cart-icon {
+          .cart-icon-container {
+            svg {
+              width: 24px;
+              height: 18px;
+            }
+
+            .cart-badge {
+              width: 15px;
+              height: 15px;
+              font-size: 8px;
+              top: -4px;
+              right: -4px;
+            }
+          }
         }
       }
 
