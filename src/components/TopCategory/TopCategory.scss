@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:  50px;
+    margin: 50px;
     width: 100%;
 
     .title {
@@ -36,7 +36,8 @@
       height: 44px;
       opacity: 1;
 
-      svg.nav-btn {
+      .arrow-left,
+      .arrow-right {
         cursor: pointer;
         transition: all 0.3s ease;
         width: 44px;
@@ -215,6 +216,8 @@
       .nav-btns {
         gap: 30px;
         
+        .arrow-left,
+        .arrow-right,
         svg.nav-btn {
           width: 40px;
           height: 40px;
@@ -318,6 +321,8 @@
       .nav-btns {
         gap: 20px;
 
+        .arrow-left,
+        .arrow-right,
         svg.nav-btn {
           width: 36px;
           height: 36px;
@@ -368,6 +373,8 @@
       .nav-btns {
         gap: 15px;
 
+        .arrow-left,
+        .arrow-right,
         svg.nav-btn {
           width: 32px;
           height: 32px;
@@ -414,9 +421,13 @@
         font-size: 22px;
       }
 
-      .nav-btns svg.nav-btn {
-        width: 28px;
-        height: 28px;
+      .nav-btns {
+        .arrow-left,
+        .arrow-right,
+        svg.nav-btn {
+          width: 28px;
+          height: 28px;
+        }
       }
     }
 

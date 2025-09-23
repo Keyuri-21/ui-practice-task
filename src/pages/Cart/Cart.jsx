@@ -2,6 +2,7 @@ import { useCart } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './Cart.scss';
+import { BackArrow, CloseIcon, CreditCardIcon, MinusIcon, PlusIcon, RadioChecked, RadioUnchecked } from '../../components/SvgIcons';
 
 const Cart = () => {
   const { 
@@ -11,7 +12,6 @@ const Cart = () => {
     getCartTotal, 
     clearCart 
   } = useCart();
-  console.log(cartItems)
   const navigate = useNavigate();
   const [paymentMethod, setPaymentMethod] = useState('credit-card');
 
@@ -21,52 +21,6 @@ const Cart = () => {
 
   const subtotal = parseFloat(getCartTotal());
   const total = subtotal;
-
-  const BackArrow = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 11H6.83L10.41 7.41L9 6L3 12L9 18L10.41 16.59L6.83 13H21V11Z" fill="black"/>
-    </svg>
-  );
-
-  const PlusIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="12" fill="#E5E5E5"/>
-      <path d="M6 12H18" stroke="black" strokeWidth="1.5"/>
-      <path d="M12 6L12 18" stroke="black" strokeWidth="1.5"/>
-    </svg>
-  );
-
-  const MinusIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="12" fill="#E5E5E5"/>
-      <path d="M6 12H18" stroke="black" strokeWidth="1.5"/>
-    </svg>
-  );
-
-  const CloseIcon = () => (
-    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.1499 4.8075L14.0924 3.75L9.8999 7.9425L5.7074 3.75L4.6499 4.8075L8.8424 9L4.6499 13.1925L5.7074 14.25L9.8999 10.0575L14.0924 14.25L15.1499 13.1925L10.9574 9L15.1499 4.8075Z" fill="#666666"/>
-    </svg>
-  );
-
-  const RadioUnchecked = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="11.5" stroke="#666666"/>
-    </svg>
-  );
-
-  const RadioChecked = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="11.5" stroke="#666666"/>
-      <circle cx="12" cy="12" r="6" fill="#22c55e"/>
-    </svg>
-  );
-
-  const CreditCardIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 4H4C2.89 4 2.01 4.89 2.01 6L2 18C2 19.11 2.89 20 4 20H20C21.11 20 22 19.11 22 18V6C22 4.89 21.11 4 20 4ZM20 18H4V12H20V18ZM20 8H4V6H20V8Z" fill="black"/>
-    </svg>
-  );
 
   return (
     <div className="cart-page">
