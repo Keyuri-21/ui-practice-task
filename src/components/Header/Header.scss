@@ -1,5 +1,5 @@
 .header {
-  width: 100%;
+  width: 99vw; 
   height: 80px;
   display: flex;
   align-items: center;
@@ -9,9 +9,10 @@
   top: 0;
   z-index: 5;
   background: linear-gradient(180deg, #FCFCF7 6.5%, #F5EEAD 100%);
+  box-sizing: border-box;
 
   // Logo Section
-  .logo {
+  .logo { 
     display: flex;
     align-items: center;
     gap: 12px;
@@ -135,8 +136,8 @@
       align-items: center;
       gap: 16px;
 
-      .heart-icon,
-      .cart-icon {
+      .heart-icon {
+        position: relative;
         cursor: pointer;
         transition: opacity 0.2s ease;
         display: flex;
@@ -149,19 +150,48 @@
           opacity: 0.7;
         }
 
-        svg {
-          display: block;
+        .heart-icon-container {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            display: block;
+            width: 29px;
+            height: 24px;
+          }
+
+          .wishlist-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #FF4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 1;
+            min-width: 20px;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            animation: wishlistBadgeAppear 0.3s ease-out;
+
+            &:has-text {
+              font-size: 10px;
+              padding: 2px 4px;
+              min-width: 18px;
+              height: 18px;
+              border-radius: 10px;
+            }
+          }
         }
-      }
-
-      .heart-icon svg {
-        width: 29px;
-        height: 24px;
-      }
-
-      .cart-icon svg {
-        width: 31px;
-        height: 25px;
       }
 
       .cart-icon {
@@ -270,11 +300,23 @@
     transform: scale(0);
     opacity: 0;
   }
-
   50% {
     transform: scale(1.2);
   }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
+@keyframes wishlistBadgeAppear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
   100% {
     transform: scale(1);
     opacity: 1;
@@ -459,18 +501,30 @@
       .action-icons {
         gap: 12px;
 
-        .heart-icon svg {
-          width: 26px;
-          height: 21px;
-        }
+        .heart-icon {
+          .heart-icon-container {
+            svg {
+              width: 26px;
+              height: 21px;
+            }
 
-        .cart-icon svg {
-          width: 28px;
-          height: 22px;
+            .wishlist-badge {
+              width: 18px;
+              height: 18px;
+              font-size: 10px;
+              top: -6px;
+              right: -6px;
+            }
+          }
         }
 
         .cart-icon {
           .cart-icon-container {
+            svg {
+              width: 28px;
+              height: 22px;
+            }
+
             .cart-badge {
               width: 18px;
               height: 18px;
@@ -546,14 +600,21 @@
       .action-icons {
         gap: 10px;
 
-        .heart-icon svg {
-          width: 24px;
-          height: 19px;
-        }
+        .heart-icon {
+          .heart-icon-container {
+            svg {
+              width: 24px;
+              height: 19px;
+            }
 
-        .cart-icon svg {
-          width: 26px;
-          height: 20px;
+            .wishlist-badge {
+              width: 16px;
+              height: 16px;
+              font-size: 9px;
+              top: -5px;
+              right: -5px;
+            }
+          }
         }
 
         .cart-icon {
@@ -629,14 +690,21 @@
       .action-icons {
         gap: 8px;
 
-        .heart-icon svg {
-          width: 22px;
-          height: 17px;
-        }
+        .heart-icon {
+          .heart-icon-container {
+            svg {
+              width: 22px;
+              height: 17px;
+            }
 
-        .cart-icon svg {
-          width: 24px;
-          height: 18px;
+            .wishlist-badge {
+              width: 15px;
+              height: 15px;
+              font-size: 8px;
+              top: -4px;
+              right: -4px;
+            }
+          }
         }
 
         .cart-icon {

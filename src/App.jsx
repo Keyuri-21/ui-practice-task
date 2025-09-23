@@ -11,6 +11,7 @@ import TopCategory from './components/TopCategory/TopCategory';
 import Cart from './pages/Cart/Cart';
 import DailyBestPage from "./pages/DailyBestProducts/DailyBestProducts";
 import Notification from "./components/Notification/Notification";
+import WishlistPage from "./pages/WishList/WishListPage";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           }
         />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/dailybest" element={<DailyBestPage />} />
       </Routes>
     </Router>

@@ -2,13 +2,21 @@ import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import './Header.scss';
 import { Cart, Heart, Search } from '../SvgIcons';
+import { useWishlist } from '../../context/WishListContext';
 
 const Header = () => {
   const { getCartCount } = useCart();
+  const { getWishlistCount } = useWishlist();
   const navigate = useNavigate();
   const cartCount = getCartCount();
+  const wishlistCount = getWishlistCount();
+
   const handleCartClick = () => {
     navigate('/cart');
+  };
+
+  const handleWishlistClick = () => {
+    navigate('/wishlist');
   };
 
   return (
@@ -37,8 +45,13 @@ const Header = () => {
 
       <div className="header-actions">
         <div className="action-icons">
-          <div className="heart-icon">
-            <Heart />
+          <div className="heart-icon" onClick={handleWishlistClick}>
+            <div className="heart-icon-container">
+              <Heart />
+              {wishlistCount > 0 && (
+                <span className="wishlist-badge">{wishlistCount}</span>
+              )}
+            </div>
           </div>
           <div className="cart-icon" onClick={handleCartClick}>
             <div className="cart-icon-container" >

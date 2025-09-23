@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './DailyBest.scss';
 import { useCart } from '../../context/CartContext';
-import { CartIcon } from '../SvgIcons';
+import { useWishlist } from '../../context/WishListContext';
+import { CartIcon, Heart } from '../SvgIcons';
 
 const DailyBest = ({ showAll = false }) => {
     const [activeCategory, setActiveCategory] = useState('all');
     const navigate = useNavigate();
     const { addToCart, isInCart } = useCart();
+    const { toggleWishlist, isInWishlist } = useWishlist();
 
     const products = [
         { id: 1, name: 'Apple', price: '$13.00', rating: 4, image: './apple.png', category: ['fruits', 'top-sell'] },
@@ -49,6 +51,12 @@ const DailyBest = ({ showAll = false }) => {
         if (!isInCart(product.id)) {
             addToCart(product);
         }
+    };
+
+    const handleWishlistToggle = (product, event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleWishlist(product);
     };
 
     const renderStars = (rating) => {
@@ -104,7 +112,7 @@ const DailyBest = ({ showAll = false }) => {
                                                 onClick={(e) => handleAddToCart(product, e)}
                                                 title='Add to cart'
                                             >
-                                                <CartIcon/>
+                                                <CartIcon />
                                             </div>
                                         )}
                                     </div>
@@ -113,11 +121,23 @@ const DailyBest = ({ showAll = false }) => {
                                     <div className='rating'>
                                         {renderStars(product.rating)}
                                     </div>
-                                    <img
-                                        className='wishlist-button'
-                                        src='./heart.png'
-                                        alt='Add to wishlist'
-                                    />
+                                    <div
+                                        className={isInWishlist(product.id)? 'added' : 'wishlist-button'}
+                                        onClick={(e) => handleWishlistToggle(product, e)}
+                                        title={isInWishlist(product.id) ? 'Remove from wishlist' : 'Add to wishlist'}
+                                    >
+                                        {isInWishlist(product.id) ? (
+                                            <img
+                                            src='./love.png'
+                                            alt='Added'
+                                            />
+                                        ) : (
+                                            <img
+                                                src='./heart.png'
+                                                alt='Add to wishlist'
+                                            />
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>

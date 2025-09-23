@@ -203,6 +203,13 @@
                 filter: grayscale(0);
               }
             }
+
+            .added {
+              width: 30px;
+              height: 30px;
+              cursor: pointer;
+              transition: transform 0.3s ease;
+            }
           }
         }
       }
@@ -342,7 +349,8 @@
                 height: 40px;
               }
 
-              .wishlist-button {
+              .wishlist-button,
+              .added {
                 width: 20px;
                 height: 20px;
               }
@@ -394,7 +402,8 @@
                 height: 45px;
               }
 
-              .wishlist-button {
+              .wishlist-button,
+              .added {
                 width: 22px;
                 height: 22px;
               }
